@@ -1,0 +1,143 @@
+/* Moje style */
+
+/* Kolory zapisane w zmiennych CSS */
+:root {
+    --color-white: #ffffff;
+    --color-black: #1d1d1f; /* Prawie czarny */
+    --color-light-gray: #f5f5f7;
+    --color-medium-gray: #86868b;
+    --color-accent-blue: #007aff;
+}
+/* Stylizacja strony */
+/* Dodatkowe style dla elementów strony */
+
+/* Na razie tak */
+body {
+    background-color: var(--color-light-gray);
+}
+
+.custom-navbar {
+    background-color: var(--color-white);
+}
+
+.custom-section {
+    background-color: var(--color-light-gray);
+}
+
+.custom-button {
+    background-color: var(--color-accent-blue);
+    color: var(--color-white);
+    border-color: var(--color-accent-blue);
+}
+
+.custom-button:hover {
+    background-color: var(--color-white);
+    color: var(--color-accent-blue);
+    border-color: var(--color-accent-blue);
+}
+
+/* Stylizacja elementów wewnętrzych przycisku koszyka */
+.custom-button .custom-badge {
+    border-color: var(--color-accent-blue);
+    color: var(--color-white);
+}
+
+.custom-button:hover .custom-badge {
+    border-color: var(--color-accent-blue);
+    color: var(--color-accent-blue);
+}
+
+.custom-product-div {
+    border-radius: 40px;
+    border-width: 0;
+    transition: transform 0.2s ease-in-out; /* Sprawia, że animacja powiększenia jest płynna*/
+    overflow: hidden; /* Przycina zawartość diva do zaokrąglonych rogów */
+}
+
+.custom-product-div:hover {
+    transform: scale(1.05); /* Zwiększamy rozmiar diva po najechaniu myszką */
+}
+
+.custom-footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.font-medium-gray {
+    color: var(--color-medium-gray);
+}
+
+.font-black {
+    color: var(--color-black);
+}
+
+/* Slider */
+/* Główny kontener */
+.slider-container {
+    position: relative; /* Umożliwia pozycjonowanie absolutne elementów potomnych (np. przycisków) względem tego kontenera */
+    width: 100%;
+    overflow: hidden; /* Ukrywa wszystkie elementy, które mogłyby wystawać poza granice kontenera */
+    background-color: var(--color-light-gray);
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+/* Kontener dla wszystkich slajdów */
+.slides {
+    position: relative; /* Potrzebne jakby slajdy miały by być pozycjonowane absolutnie */
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+/* Pojedynczy slajd */
+.slide {
+    width: 100%;
+    display: none; /* Domyślnie wszystkie slajdy są ukryte  */
+}
+
+/* Aktywny slajd */
+.slide.active {
+    display: block; /* Uwidocznia slajd*/
+}
+
+/* Obrazek wewnątrz slajdu */
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block; /* Usuwa ewentualny margines pod obrazkiem, które może pojawić się dla elementów inline */
+}
+
+/* Ogólne style dla przycisków */
+.slider-btn {
+    position: absolute; /* Pozycjonuje przyciski względem najbliższego rodzica z position relative */
+    top: 50%; /* Umieszcza górną krawędź przycisku w połowie wysokości kontenera slidera */
+    transform: translateY(
+        -50%
+    ); /* Przesuwa przycisk o połowę jego własnej wysokości w górę, co efektywnie centruje go pionowo */
+    background-color: rgba(29, 29, 29, 0.3); /* Kolor tła przycisku --color-black z przezroczystścią */
+    color: var(--color-white);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer; /* Zmienia kursor na "rączkę" po najechaniu, wskazując interaktywność */
+    z-index: 10; /* Wyższa wartość oznacza, że element będzie na wierzchu innych elementów z niższym z-index */
+    border-radius: 30%;
+    font-size: 1.2rem; /* Rozmiar czcionki wewnątrz przycisku */
+    line-height: 1; /* Wysokość linii tekstu/ikony */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background-color: rgba(29, 29, 29, 0.6); /* --color-black tylko z przezroczystością */
+}
+
+.prev-btn {
+    left: 25px; /* Odsuwanie przycisku od lewej strony kontenera .slider-container */
+}
+
+.next-btn {
+    right: 25px;
+}

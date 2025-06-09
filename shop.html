@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Apple Store - Najlepsze Produkty</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top"> -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand font-black" href="shop.html">Apple Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item font-medium-gray"><a class="nav-link" aria-current="page"
+                            href="shop.html">Sklep</a></li>
+                    <li class="nav-item font-medium-gray"><a class="nav-link" href="#!">O nas</a></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Sklep</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Wszystkie produkty</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#!">Popularne</a></li>
+                            <li><a class="dropdown-item" href="#!">Nowości</a></li>
+                        </ul> -->
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark custom-button" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Koszyk
+                        <span class="badge ms-1 rounded-pill custom-badge">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Slider -->
+    <section id="image-slider" class="slider-container">
+        <div class="slides">
+            <div class="slide active">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/b1-big.jpg">
+                    <img src="images/b1-small.jpg" alt="Baner1">
+                </picture>
+            </div>
+            <div class="slide">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/b2-big.jpg">
+                    <img src="images/b2-small.jpg" alt="Baner2">
+                </picture>
+            </div>
+            <div class="slide">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/b3-big.jpg">
+                    <img src="images/b3-small.jpg" alt="Baner2">
+                </picture>
+            </div>
+        </div>
+        <button class="slider-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
+        <button class="slider-btn next-btn"><i class="bi bi-chevron-right"></i></button>
+    </section>
+    <!-- Section-->
+    <section class="py-1 custom-section">
+        <div class="container-fluid px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center font-black">
+                <!-- Produkt 1: iPhone 15 Pro -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img1.jpg" alt="iPhone 15 Pro Tytan Naturalny" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iPhone 15 Pro (Tytan Naturalny, 128GB)</h5>
+                                5 999 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 2: MacBook Air M2 -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <!-- <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            Promocja
+                        </div> -->
+                        <img class="card-img-top" src="images/img2.jpg" alt="MacBook Air M2 Północ" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">MacBook Air M2 (13", Północ, 256GB)</h5>
+                                <!-- <span class="text-muted text-decoration-line-through">5 799 PLN</span> -->
+                                5 299 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 3: iPad Pro -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img3.jpg" alt="iPad Pro 11 Gwiezdna Szarość" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iPad Pro 11" (Wi-Fi, Gwiezdna Szarość, 128GB)</h5>
+                                4 699 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 4: Apple Watch Series 9 -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img4.jpg" alt="Apple Watch Series 9 Północ" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Apple Watch S9 (GPS, Północ, Aluminium, 45mm)</h5>
+                                2 249 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 5: AirPods Pro (2. gen.) -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <div class="badge bg-info text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            Nowość</div>
+                        <img class="card-img-top" src="images/img5.jpg" alt="AirPods Pro (2. generacji) Białe" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">AirPods Pro (2. gen., Białe)</h5>
+                                1 299 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 6: iMac 24" -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img6.jpg" alt="iMac 24 Niebieski" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iMac 24" (M3, Niebieski, 8GB RAM, 256GB SSD)</h5>
+                                7 499 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 7: iPhone 14 -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            Polecane</div>
+                        <img class="card-img-top" src="images/img7.jpg" alt="iPhone 14 Północ" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iPhone 14 (Północ, 128GB)</h5>
+                                <!-- <span class="text-muted text-decoration-line-through">4 599 PLN</span> -->
+                                4 099 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 8: iPad mini -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img8.jpg" alt="iPad mini Gwiezdna Szarość" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iPad mini (Gwiezdna Szarość, 64GB)</h5>
+                                2 999 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 9: Apple Pencil (2. gen.) -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img9.jpg" alt="Apple Pencil 2 gen" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Apple Pencil (2. gen.)</h5>
+                                729 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 10: Magic Keyboard dla iPad Pro -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img10.jpg" alt="Magic Keyboard dla iPad Pro 11" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Magic Keyboard (dla iPad Pro 11")</h5>
+                                1 799 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 11: HomePod mini -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img11.jpg" alt="HomePod mini Gwiezdna Szarość" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">HomePod mini (Gwiezdna Szarość)</h5>
+                                529 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 12: Apple TV 4K -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img12.jpg" alt="Apple TV 4K 128GB" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Apple TV 4K (Wi-Fi + Ethernet, 128GB)</h5>
+                                829 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 13: Mac Studio -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img13.jpg" alt="Mac Studio M2 Max" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Mac Studio (M2 Max, 32GB RAM, 512GB SSD)</h5>
+                                11 999 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 14: Studio Display -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img14.jpg" alt="Studio Display Szkło Standardowe" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Studio Display (Szkło standardowe, Podstawa z regulacją
+                                    nachylenia)</h5>
+                                8 999 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 15: MacBook Pro 14" -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img15.jpg" alt="MacBook Pro 14 M3 Pro Gwiezdna Czerń" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">MacBook Pro 14" (M3 Pro, Gwiezdna Czerń, 18GB RAM,
+                                    512GB SSD)</h5>
+                                11 499 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 16: AirTag -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img16.jpg" alt="AirTag 1-pak" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">AirTag (1 sztuka)</h5>
+                                179 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 17: iPhone SE -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img17.jpg" alt="iPhone SE (PRODUCT)RED" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iPhone SE (Czerwony, 64GB)</h5>
+                                2 599 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 18: iPad Air -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img18.jpg" alt="iPad Air Modry" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">iPad Air (5. gen., Wi-Fi, Modry, 64GB)</h5>
+                                3 799 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 19: Mac mini -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img19.jpg" alt="Mac mini M2 Srebrny" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Mac mini (M2, Srebrny, 8GB RAM, 256GB SSD)</h5>
+                                3 699 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkt 20: Magic Mouse -->
+                <div class="col-md-4 col-lg-3 mb-5">
+                    <div class="card h-100 custom-product-div">
+                        <img class="card-img-top" src="images/img20.jpg" alt="Magic Mouse Biała" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Magic Mouse (Biała)</h5>
+                                429 PLN
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-button" href="#">
+                                    Dodaj do koszyka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5 custom-footer">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; bazant03 2025</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script>
+        //Skrypt uruchomi się po załadowaniu strony
+        $(document).ready(initSlider)
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
