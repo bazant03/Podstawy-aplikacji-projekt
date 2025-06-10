@@ -54,7 +54,7 @@
     </header>
 
     <!-- Główna treść strony "O nas" -->
-    <main class="container py-5">
+    <section class="container py-5">
         <div class="row">
             <!-- Lewa kolumna z tekstem -->
             <div class="col-lg-7 mb-5 mb-lg-0">
@@ -78,33 +78,42 @@
             </div>
 
             <div class="col-lg-5">
-                <div class="card p-4 custom-form-div"> <!-- Dodano padding wewnętrzny do karty -->
+                <div class="card p-4 custom-form-div">
                     <h3 class="fw-bolder mb-4 text-center">Skontaktuj się z Nami</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" novalidate>
+                        <!-- Formularz będzie walidowany tylko przez JS dla spójności odpowiedzi-->
                         <div class="mb-3">
                             <label for="name" class="form-label">Imię</label>
                             <input type="text" class="form-control" id="name" placeholder="Jan" required>
+                            <div class="invalid-feedback">
+                                Proszę podać swoje imię np. Anna, Jan-Krzysztof.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Adres Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="email@przyklad.com"
-                                required>
+                            <input type="email" class="form-control" id="email" placeholder="email@przyklad.com" required>
+                            <div class="invalid-feedback">
+                                Proszę podać poprawny adres email.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="subject" class="form-label">Temat</label>
-                            <input type="text" class="form-control" id="subject"
-                                placeholder="Pytanie dotyczące produktu...">
+                            <input type="text" class="form-control" id="subject" placeholder="Pytanie dotyczące produktu...">
+                            <div class="invalid-feedback">
+                                Temat jest za długi (maks. 100 znaków).
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Wiadomość</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Twoja wiadomość..."
-                                required></textarea>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Twoja wiadomość..." required></textarea>
+                            <div class="invalid-feedback">
+                                Proszę wpisać treść wiadomości (od 1 do 255 znaków).
+                            </div>
                         </div>
-                        <div class="d-grid"> <!-- pelna szerokość-->
+                        <div class="d-grid">
                             <button class="btn btn-primary btn-lg custom-button" type="submit">Wyślij Wiadomość</button>
-                            <!-- btn-primary dla wyróżnienia, btn-lg dla większego przycisku -->
                         </div>
-                    </form>
+                        </form>
                 </div>
             </div>
         </div>
@@ -126,12 +135,12 @@
                 </p>
             </div>
         </div>
-    </main>
+    </section>
 
     <!-- Footer-->
     <footer class="py-5 custom-footer">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright © bazant03 2025</p>
+            <p class="m-0 text-center text-white">Copyright &copy; bazant03 2025</p>
         </div>
     </footer>
 
@@ -146,6 +155,7 @@
         };
         new google.maps.Map(document.getElementById("map-container"), options);
     </script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>
