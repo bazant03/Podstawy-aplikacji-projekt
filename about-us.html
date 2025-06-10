@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Informacje o Apple Store - pasja do technologii i innowacji." />
+    <meta name="author" content="" />
+    <title>O nas - Apple Store</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand font-black" href="shop.html">Apple Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item font-medium-gray"><a class="nav-link" href="shop.html">Sklep</a></li>
+                    <li class="nav-item font-medium-gray"><a class="nav-link" aria-current="page" href="about-us.html">O
+                            nas</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark custom-button" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Koszyk
+                        <span class="badge ms-1 rounded-pill custom-badge">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header dla strony "O nas" -->
+    <header class="py-5 border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder display-4">Poznaj Naszą Historię</h1>
+                <p class="lead mb-0">Pasja do technologii, która napędza innowacje.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Główna treść strony "O nas" -->
+    <main class="container py-5">
+        <div class="row">
+            <!-- Lewa kolumna z tekstem -->
+            <div class="col-lg-7 mb-5 mb-lg-0">
+                <h2 class="fw-bolder mb-4">Kim Jesteśmy?</h2>
+                <p class="lead">Witaj w naszym świecie Apple! Jesteśmy zespołem entuzjastów najnowszych technologii,
+                    których misją jest dostarczanie Wam najlepszych produktów i rozwiązań od Apple. Od lat
+                    fascynujemy się innowacyjnością, designem i prostotą, które charakteryzują każdy produkt tej marki.
+                </p>
+                <p>Nasz sklep to nie tylko miejsce sprzedaży – to przestrzeń, gdzie możesz odkryć pełen potencjał
+                    urządzeń Apple, uzyskać profesjonalne doradztwo i dołączyć do społeczności pasjonatów.
+                    Staramy się, aby każde Twoje doświadczenie z nami było równie wyjątkowe, jak produkty, które
+                    oferujemy.
+                </p>
+                <h3 class="fw-bolder mt-5 mb-3">Nasze Wartości</h3>
+                <ul>
+                    <li><strong>Innowacja:</strong> Zawsze na bieżąco z najnowszymi trendami i technologiami.</li>
+                    <li><strong>Jakość:</strong> Oferujemy tylko oryginalne produkty najwyższej klasy.</li>
+                    <li><strong>Obsługa Klienta:</strong> Twój komfort i zadowolenie są dla nas priorytetem.</li>
+                    <li><strong>Pasja:</strong> Kochamy to, co robimy i chętnie dzielimy się tą pasją z Tobą.</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card p-4 custom-form-div"> <!-- Dodano padding wewnętrzny do karty -->
+                    <h3 class="fw-bolder mb-4 text-center">Skontaktuj się z Nami</h3>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Imię</label>
+                            <input type="text" class="form-control" id="name" placeholder="Jan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adres Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@przyklad.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Temat</label>
+                            <input type="text" class="form-control" id="subject"
+                                placeholder="Pytanie dotyczące produktu...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Wiadomość</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Twoja wiadomość..."
+                                required></textarea>
+                        </div>
+                        <div class="d-grid"> <!-- pelna szerokość-->
+                            <button class="btn btn-primary btn-lg custom-button" type="submit">Wyślij Wiadomość</button>
+                            <!-- btn-primary dla wyróżnienia, btn-lg dla większego przycisku -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Miejsce na mapę -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="fw-bolder mb-4 text-center">Znajdź Nas</h2>
+                <div id="map-container" class="map-placeholder">
+                    Tutaj w przyszłości pojawi się interaktywna mapa z naszą lokalizacją.
+                </div>
+                <p class="text-center mt-3">
+                    Odwiedź nas osobiście lub skontaktuj się, aby dowiedzieć się więcej!
+                </p>
+                <p class="text-center">
+                    <strong>Adres:</strong> ul. Jabłkowa 123, 00-001 Warszawa<br>
+                    <strong>Email:</strong> kontakt@applestoreprzyklad.pl<br>
+                    <strong>Telefon:</strong> +48 123 456 789
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer-->
+    <footer class="py-5 custom-footer">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright © bazant03 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+        var coords = new google.maps.LatLng(53.419, 14.581);
+        var options = {
+            zoom: 10,
+            center: coords,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        new google.maps.Map(document.getElementById("map-container"), options);
+    </script>
+</body>
+
+</html>

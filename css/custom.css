@@ -14,6 +14,7 @@
 /* Na razie tak */
 body {
     background-color: var(--color-light-gray);
+    font-family: Inter;
 }
 
 .custom-navbar {
@@ -48,7 +49,7 @@ body {
 }
 
 .custom-product-div {
-    border-radius: 40px;
+    border-radius: 30px;
     border-width: 0;
     transition: transform 0.2s ease-in-out; /* Sprawia, że animacja powiększenia jest płynna*/
     overflow: hidden; /* Przycina zawartość diva do zaokrąglonych rogów */
@@ -71,6 +72,11 @@ body {
     color: var(--color-black);
 }
 
+.custom-h {
+    /* padding-top: 30px; */
+    font-weight: bold;
+}
+
 /* Slider */
 /* Główny kontener */
 .slider-container {
@@ -79,7 +85,7 @@ body {
     overflow: hidden; /* Ukrywa wszystkie elementy, które mogłyby wystawać poza granice kontenera */
     background-color: var(--color-light-gray);
     padding: 0 20px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 /* Kontener dla wszystkich slajdów */
@@ -140,4 +146,26 @@ body {
 
 .next-btn {
     right: 25px;
+}
+
+.custom-form-div {
+    border-radius: 30px;
+    border-width: 0;
+}
+
+/* Mapka */
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e9ecef;
+    border: 1px dashed #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 0.25rem;
 }
