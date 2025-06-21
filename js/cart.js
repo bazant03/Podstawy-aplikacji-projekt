@@ -6,8 +6,8 @@
         const emptyCartMessagePage = document.getElementById("empty-cart-message-page"); // Div z informacją o pustym koszyku
         const cartTotalItemsSpan = document.getElementById("cart-total-items"); // Liczba produków w podsumowaniu
         const cartTotalPriceSummarySpan = document.getElementById("cart-total-price-summary"); //Łączna cena w podsumowaniu
-        const checkoutBtn = document.getElementById("checkout-btn"); // Guzik przechodzący do zapłaty (jeśli istnieje)
-        const clearCartBtnPage = document.getElementById("clear-cart-btn-page"); // Guzik czyszczący koszyk (jeśli istnieje na stronie koszyka)
+        const checkoutBtn = document.getElementById("checkout-btn"); // Guzik przechodzący do zapłaty
+        const clearCartBtnPage = document.getElementById("clear-cart-btn-page"); // Guzik czyszczący koszyk
 
         // Pobieramy koszyk z localStorage, jeśli jest pusty czyli nie ma go w localStorage to przypisujemy pustą listę
         let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
@@ -42,9 +42,9 @@
             }
         }
 
-        // Formatowanie ceny aby miała dwie cyfry po przecinku i dodawała walutę PLN
+        // Formatowanie ceny aby miała dwie cyfry po przecinku i dodawała walutę zł
         function formatPrice(price) {
-            return parseFloat(price).toFixed(2) + " PLN";
+            return parseFloat(price).toFixed(2) + " zł";
         }
 
         // Dodawanie produktu do koszyka
@@ -73,6 +73,7 @@
         // Dla każdego guzika Dodaj do koszyka z klasą add-to-cart-btn dodajemy event listener
         // tak aby po jego naciśnięciu produkt został umieszczony w koszyku
         document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
+            // obsługa zdarzeń - Lab 6
             button.addEventListener("click", (e) => {
                 e.preventDefault();
                 e.stopPropagation(); // Zapobiega przejściu do strony produktu po wciśnięciu guzika
@@ -114,7 +115,7 @@
 
             if (cart.length === 0) {
                 // Jeśli koszyk jest pusty, to uwidoczniamy div z wiadomością o pustym koszyku.
-                emptyCartMessagePage.style.display = "block";
+                emptyCartMessagePage.style.display = "block"; // coś nie działa
             } else {
                 // Jeśli koszyk nie jest pusty:
                 emptyCartMessagePage.style.display = "none"; // Chowamy div z wiadomością o pustym koszyku.
@@ -126,7 +127,7 @@
 
                     // Generujemy dynamicznie kod HTML produktu na stronie koszyka.
                     const itemElement = document.createElement("div");
-                    itemElement.classList.add("card", "mb-3", "cart-item-card"); // Nadajemy klasy do stylizacji.
+                    itemElement.classList.add("card", "mb-3", "cart-item-card", "custom-card-div"); // Nadajemy klasy do stylizacji.
                     itemElement.dataset.productId = item.id;
                     // Dynamizcne generowanie kodu html pojedynczego produktu
                     // Wypełniamy element HTML strukturą dla pojedynczej pozycji w koszyku, używając template string.
@@ -164,7 +165,7 @@
                                 <div class="col-md-1 col-2 mt-2 mt-md-0 text-end">
                                     <button class="btn btn-outline-danger btn-sm remove-from-cart-btn" data-product-id="${
                                         item.id
-                                    }">X</button>
+                                    }">x</button>
                                 </div>
                             </div>
                         </div>

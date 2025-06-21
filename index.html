@@ -2,52 +2,130 @@
 <html lang="pl">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /> <!-- Kodowanie strony -->
+    <!-- Wyśrodkowanie zawartośći na ekranie - Lab 1 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
     <title>Apple Store - Najlepsze Produkty</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" /> <!-- Ikona na karcie przeglądarki -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Dołączenie czcionki z serwisu GoogleFonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <!-- Dołączenie zewnętrznych arkuszy css - Lab2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <!-- Menu nawigacyjne -->
+    <!-- Bootstrap - Lab 10 -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <!-- 
+        Navbar to wbudowana klasa dla nagłówka
+        navbar-expand-lg oznacza dla jakiego rozmiaru pasek ma się rozsunąć z zwijanego menu 
+        custom-navbar to moja klasa do stylizowania nagłówka
+        -->
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand font-black" href="shop.html">Apple Store</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <!-- 
+            container to wbudowana klasa tworząca wyśrodkowany element o stałej szerokości 
+            px-4 dodaje padding 4px z lewej i prawej strony                                  
+            -->
+            <a class="navbar-brand" href="index.html">Apple Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <!-- 
+            navbar toggler to przycisk rozwijania menu który pojawia się na zwężonym ekranie 
+            
+            data-bs-toggle="collapse" atrybut danych Bootstrapa, który włącza funkcjonalność zwijania/rozwijania dla komponentu "collapse"
+            
+            data-bs-target="#navbarSupportedContent" wskazuje na id elementu, który ma być zwijany/rozwijany po kliknięciu tego przycisku
+            
+            aria-controls, aria-expanded, aria-label to atrybuty ARIA dla lepszej dostępności, opisujące stan i funkcję przycisku
+            
+            navbar-toggler-icon - klasa dla elementu span wewnątrz przycisku, która tworzy ikonę (trzy poziome kreski) 
+            -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- 
+                                collapse - klasa dla komponentu, który może być zwijany i rozwijany, domyślnie jest ukryty.
+                                navbar-collapse - klasa dla komponentu collapse używanego wewnątrz paska nawigacyjnego,
+                                odpowiada za prawidłowe zachowanie i układ elementów menu podczas zwijania/rozwijania.
+                                                                        
+                                id="navbarSupportedContent" - id, do którego odwołuje się przycisk "navbar-toggler".
+                                -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item font-medium-gray"><a class="nav-link" aria-current="page"
-                            href="shop.html">Sklep</a></li>
-                    <li class="nav-item font-medium-gray"><a class="nav-link" href="about-us.html">O nas</a></li>
+                    <!-- 
+                    navbar-nav - podstawowa klasa dla listy linków nawigacyjnych w pasku
+                    
+                    me-auto - klasa użytkowa Bootstrapa margin-end: auto, która wypycha ten element maksymalnie w lewo, 
+                    a elementy po nim (jeśli są) na prawo. Używana do wyrównania grup linków.
+                    
+                    mb-2 - dodaje margines dolny (margin-bottom) o wielkości 2 (domyślnie 0.5rem).
+                    
+                    mb-lg-0 - Na ekranach large (lg) i większych usuwa margines dolny (margin-bottom: 0).
+                    Przydatne, gdy w widoku mobilnym elementy listy układają się jeden pod drugim i potrzebują odstępu, 
+                    a w widoku rozwiniętym (desktop) są w jednym rzędzie i odstęp nie jest potrzebny.
+                    ms-lg-4 - Na ekranach large i większych dodaje margines początkowy  
+                    o wielkości 4 (domyślnie 1.5rem).
+                    -->
+                    <li class="nav-item font-medium-gray">
+                        <a class="nav-link" aria-current="page" href="index.html">Sklep
+                            <!-- 
+                    .nav-link - stylizuje link wewnątrz elementu .nav-item. Odpowiada za padding, kolor itp.
+                    aria-current="page" - atrybut ARIA wskazujący, że ten link prowadzi do bieżącej strony 
+                    Bootstrap może go używać do specjalnego ostylowania aktywnego linku.
+                    -->
+                        </a>
+                    </li>
+                    <li class="nav-item font-medium-gray">
+                        <a class="nav-link" href="about-us.html">O nas</a>
+                    </li>
+                    <!-- 
+                    .nav-item - klasa dla pojedynczego elementu (pozycji) listy nawigacyjnej.
+                    .font-medium-gray - moja klasa do stylizacji fontu.
+                    -->
                 </ul>
                 <form class="d-flex">
+                    <!-- 
+                    .d-flex: Klasa użytkowa Bootstrapa ustawiająca 'display: flex;'. Używana tutaj, aby elementy wewnątrz formularza 
+                    (w tym przypadku tylko link-przycisk koszyka) układały się w jednej linii.
+                    flexbox - Lab 3
+                    -->
                     <a href="cart.html" class="btn btn-outline-dark custom-button text-decoration-none">
+                        <!-- 
+                        .btn - podstawowa klasa Bootstrapa do stylizacji przycisków (lub linków wyglądających jak przyciski).
+                        .btn-outline-dark - wariant przycisku "outline" (tylko ramka) w ciemnym kolorze. 
+                        tło pojawia się po najechaniu.
+                        .custom-button - moja klasa do dodatkowej stylizacji przycisku.
+                        .text-decoration-none - Klasa użytkowa Bootstrapa usuwająca domyślne podkreślenie linku.
+                        -->
                         <i class="bi-cart-fill me-1"></i>
+<!-- 
+    .bi-cart-fill - klasa z biblioteki Bootstrap Icons, wyświetlająca ikonę wypełnionego koszyka.
+    .me-1 - klasa użytkowa Bootstrapa dodająca mały margines końcowy 
+            (wielkość 1, domyślnie 0.25rem), aby oddzielić ikonę od tekstu.
+-->
                         Koszyk
                         <span class="badge ms-1 rounded-pill custom-badge">0</span>
+                        <!-- 
+                        .badge - klasa Bootstrapa do tworzenia małych plakietek/etykiet.
+                        .ms-1 - dodaje mały margines początkowy, aby oddzielić plakietkę od tekstu Koszyk.
+                        .rounded-pill - stylizuje plakietkę tak, aby miała kształt pigułki (mocno zaokrąglone rogi).
+                        .custom-badge - moja klasa do dodatkowej stylizacji plakietki 
+                        -->
                     </a>
                 </form>
             </div>
         </div>
     </nav>
     <!-- Slider -->
-    <h1 class="custom-h my-4 text-center">Nowa oferta:</h1>
-    <section id="image-slider" class="slider-container">
+    <h1 class="custom-h my-4 text-center">Nowa oferta:</h1> <!-- margines o wielkości 4 (1.5rem) od góry i dołu -->
+    <section id="image-slider" class="slider-container"> <!-- Kontener na slider -->
         <div class="slides">
-            <div class="slide active">
-                <picture>
+            <div class="slide active"> <!-- Domyślnie aktywny slajd -->
+                <picture> <!-- W zależności od rozmiaru ekranu urządzenia wybierany jest odpowiedni obraz - Lab 5 -->
                     <source media="(min-width: 768px)" srcset="images/b1-big.jpg">
                     <img src="images/b1-small.jpg" alt="Baner1">
                 </picture>
@@ -61,34 +139,74 @@
             <div class="slide">
                 <picture>
                     <source media="(min-width: 768px)" srcset="images/b3-big.jpg">
-                    <img src="images/b3-small.jpg" alt="Baner3"> <!-- Poprawiono alt -->
+                    <img src="images/b3-small.jpg" alt="Baner3">
                 </picture>
             </div>
         </div>
         <button class="slider-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
         <button class="slider-btn next-btn"><i class="bi bi-chevron-right"></i></button>
     </section>
-    <!-- Section-->
+    <!-- Sekcja z produktami -->
     <section class="custom-section">
         <h1 class="custom-h my-4 text-center">Nasze produkty:</h1>
         <div class="container-fluid px-4 px-lg-5 mt-5">
+            <!-- container-fluid - kontener Bootstrapa, który zawsze zajmuje 100% dostępnej szerokości 
+            .px-lg-5 - na ekranach large i większych, padding na osi X jest zwiększany do wielkości 5
+            .mt-5 - dodaje margines górny (margin-top) o wielkości 5 (domyślnie 3rem)
+            -->
             <div class="row gx-4 gx-lg-5 justify-content-center font-black">
+                <!-- 
+                .row - klasa Bootstrapa tworząca wiersz w systemie siatki. Umożliwia umieszczanie kolumn obok siebie.
+                Jest to kontener flex.
+                .gx-4 - ustawia poziomy odstęp (gutter) między kolumnami w tym wierszu na wielkość 4.
+                .gx-lg-5 - na ekranach large  i większych, poziomy odstęp między kolumnami jest zwiększany do wielkości 5.
+                .justify-content-center: klasa flexbox Bootstrapa, która centruje kolumny w poziomie wewnątrz wiersza, 
+                jeśli suma szerokości kolumn jest mniejsza niż szerokość wiersza.
+                -->
+
                 <!-- Produkt 1: iPhone 15 Pro -->
                 <div class="col-md-4 col-lg-3 mb-5">
+                    <!-- 
+                    .col-md-4 - definiuje kolumnę w siatce Bootstrapa. 
+                    na ekranach średnich (md) i większych, ta kolumna zajmie 4 z 12 dostępnych jednostek siatki (czyli 1/3 - szerokości).
+                    na mniejszych ekranach (poniżej md) domyślnie zajmie całą szerokość (układając produkty jeden pod drugim).
+                    .col-lg-3 - na ekranach dużych (lg) i większych, ta kolumna zajmie 3 z 12 jednostek siatki (czyli 1/4 szerokości).
+                    Ta reguła nadpisuje .col-md-4 dla większych ekranów.
+                    .mb-5 - Dodaje margines dolny o wielkości 5, tworząc odstęp między rzędami produktów.
+                    -->
                     <a href="product-sites/p1.html" class="text-decoration-none text-dark d-block h-100">
+                        <!-- 
+                        .d-block - sprawia, że link zachowuje się jak element blokowy, wypełniając dostępną przestrzeń.
+                        .h-100 - ustawia wysokość linku (a tym samym klikalnego obszaru) na 100% wysokości jego rodzica (kolumny .col-md-4).
+                        -->
                         <div class="card h-100 custom-product-div">
                             <img class="card-img-top" src="images/img1.jpg" alt="iPhone 15 Pro Tytan Naturalny" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">iPhone 15 Pro (Tytan Naturalny, 128GB)</h5>
-                                    5 999 PLN
+                                    <!-- fw-bolder: klasa - Bootstrapa ustawiająca grubość czcionki na bolder -->
+                                    5 999 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <!-- 
+                                .card-footer - sekcja stopki karty. Zazwyczaj ma inny styl tła i odseparowanie od .card-body.
+                                .p-4 - dodaje padding ze wszystkich stron o wielkości 4.
+                                .pt-0 - nadpisuje padding-top, ustawiając go na 0.
+                                .border-top-0 - usuwa górną ramkę, która mogłaby być domyślnie dodana przez .card-footer.
+                                .bg-transparent: Ustawia tło na przezroczyste.
+                                -->
                                 <div class="text-center">
                                     <button class="btn btn-outline-dark mt-auto custom-button add-to-cart-btn" data-product-id="1"
                                         data-product-name="iPhone 15 Pro (Tytan Naturalny, 128GB)" data-product-price="5999"
                                         data-product-image="images/img1.jpg">
+                                        <!-- 
+                                        .btn - klasa przycisku.
+                                        .mt-auto - wypycha element na dół, 
+                                        jeśli jest wolne miejsce. Działa dobrze do pozycjonowania przycisku na dole karty.
+                                        .add-to-cart-btn - moja klasa używana przez js do identyfikacji przycisku.
+                                        data-* - atrybuty danych przechowujące informacje o produkcie dla js
+                                        -->
                                         Dodaj do koszyka
                                     </button>
                                 </div>
@@ -104,13 +222,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">MacBook Air M2 (13", Północ, 256GB)</h5>
-                                    5 299 PLN
+                                    5 299 zł
                                     </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <button class="btn btn-outline-dark mt-auto custom-button add-to-cart-btn" data-product-id="2"
-                                        data-product-name="MacBook Air M2 (13" , Północ, 256GB)" data-product-price="5299"
+                                        data-product-name="MacBook Air M2 (13'' , Północ, 256GB)" data-product-price="5299"
                                         data-product-image="images/img2.jpg">
                                         Dodaj do koszyka
                                     </button>
@@ -127,13 +245,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">iPad Pro 11" (Wi-Fi, Gwiezdna Szarość, 128GB)</h5>
-                                    4 699 PLN
+                                    4 699 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <button class="btn btn-outline-dark mt-auto custom-button add-to-cart-btn" data-product-id="3"
-                                        data-product-name="iPad Pro 11" (Wi-Fi, Gwiezdna Szarość, 128GB)" data-product-price="4699"
+                                        data-product-name="iPad Pro 11'' (Wi-Fi, Gwiezdna Szarość, 128GB)" data-product-price="4699"
                                         data-product-image="images/img3.jpg">
                                         Dodaj do koszyka
                                     </button>
@@ -150,7 +268,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Apple Watch S9 (GPS, Północ, Aluminium, 45mm)</h5>
-                                    2 249 PLN
+                                    2 249 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -173,7 +291,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">AirPods Pro (2. gen., Białe)</h5>
-                                    1 299 PLN
+                                    1 299 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -195,13 +313,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">iMac 24" (M3, Niebieski, 8GB RAM, 256GB SSD)</h5>
-                                    7 499 PLN
+                                    7 499 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <button class="btn btn-outline-dark mt-auto custom-button add-to-cart-btn" data-product-id="6"
-                                        data-product-name="iMac 24" (M3, Niebieski, 8GB RAM, 256GB SSD)" data-product-price="7499"
+                                        data-product-name="iMac 24'' (M3, Niebieski, 8GB RAM, 256GB SSD)" data-product-price="7499"
                                         data-product-image="images/img6.jpg">
                                         Dodaj do koszyka
                                     </button>
@@ -218,7 +336,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">iPhone 14 (Północ, 128GB)</h5>
-                                    4 099 PLN
+                                    4 099 zł
                                     </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -240,7 +358,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">iPad mini (Gwiezdna Szarość, 64GB)</h5>
-                                    2 999 PLN
+                                    2 999 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -263,7 +381,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Apple Pencil (2. gen.)</h5>
-                                    729 PLN
+                                    729 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -285,13 +403,13 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Magic Keyboard (dla iPad Pro 11")</h5>
-                                    1 799 PLN
+                                    1 799 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <button class="btn btn-outline-dark mt-auto custom-button add-to-cart-btn" data-product-id="10"
-                                        data-product-name="Magic Keyboard (dla iPad Pro 11" )" data-product-price="1799"
+                                        data-product-name="Magic Keyboard (dla iPad Pro 11'' )" data-product-price="1799"
                                         data-product-image="images/img10.jpg">
                                         Dodaj do koszyka
                                     </button>
@@ -308,7 +426,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">HomePod mini (Gwiezdna Szarość)</h5>
-                                    529 PLN
+                                    529 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -331,7 +449,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Apple TV 4K (Wi-Fi + Ethernet, 128GB)</h5>
-                                    829 PLN
+                                    829 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -354,7 +472,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Mac Studio (M2 Max, 32GB RAM, 512GB SSD)</h5>
-                                    11 999 PLN
+                                    11 999 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -378,7 +496,7 @@
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Studio Display (Szkło standardowe, Podstawa z regulacją
                                         nachylenia)</h5>
-                                    8 999 PLN
+                                    8 999 zł
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -402,13 +520,13 @@
                                 <div class="text-center">
                                     <h5 class="fw-bolder">MacBook Pro 14" (M3 Pro, Gwiezdna Czerń, 18GB RAM, 512GB SSD)
                                     </h5>
-                                    11 499 PLN
+                                    11 499 zł
                                     </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <button class="btn btn-outline-dark mt-auto custom-button add-to-cart-btn" data-product-id="15"
-                                        data-product-name="MacBook Pro 14" (M3 Pro, Gwiezdna Czerń, 18GB RAM, 512GB SSD)" data-product-price="11499"
+                                        data-product-name="MacBook Pro 14'' (M3 Pro, Gwiezdna Czerń, 18GB RAM, 512GB SSD)" data-product-price="11499"
                                         data-product-image="images/img15.jpg">
                                         Dodaj do koszyka
                                     </button>
@@ -425,7 +543,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">AirTag (4-pak)</h5>
-                                    549 PLN
+                                    549 zł
                                     </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -442,9 +560,11 @@
             </div>
         </div>
     </section>
+    <!-- Stopka -->
     <footer class="py-5 custom-footer">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright © bazant03 2025</p>
+            <p class="m-0 text-center text-white">Copyright &copy; MR</p> <!-- m-0 zeruje wszystkie marginesy-->
+            <p class="text-center">Zdjęcia i opisy produktów oraz treści akapitów zostały wygenerowane przez Google Gemini</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -452,6 +572,7 @@
     <script src="js/slider.js"></script>
     <script src="js/cart.js"></script>
     <script>$(document).ready(initSlider);</script>
+    <!-- Dołączenie skryptów js -->
 </body>
 
 </html>

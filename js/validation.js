@@ -1,4 +1,4 @@
-// Walidacja z użyciem JS - Lab8 Dopisac potem wiecej komentarzy
+// Walidacja z użyciem JS - Lab 8
 
 // Funkcja typu IIFE, czyli samowykonująca się funkcja anonimowa
 (() => {
@@ -31,6 +31,7 @@
         // Funkcje do walidowania konkretnych pól
         function validateNameInput() {
             const nameInput = document.getElementById("name");
+            // Najpierw duża litera, potem conajmniej jedna mała, opcjonalnie : "-",duża litera, conajmniej jedna mała
             const namePattern = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(?:-[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)?$/;
             return validateField(
                 nameInput,
@@ -41,6 +42,8 @@
 
         function validateEmailInput() {
             const emailInput = document.getElementById("email");
+            // Najpierw conajmniej jeden znak niebędący "@", następnie "@", conajmniej jeden znak != "@", "." ,
+            // conajmniej jeden znak != "@"
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return validateField(emailInput, (value) => emailPattern.test(value), "Proszę podać poprawny adres email.");
         }
